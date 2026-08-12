@@ -37,18 +37,18 @@ LEAD_RATE_LIMIT_MAX=5
 
 `GOOGLE_SHEET_ENDPOINT` must point to a secure Google Apps Script endpoint or a server-owned sheet integration. Do not place Sheet URLs, service-account credentials, or private keys in frontend code.
 
-## Content Replacement
+## Content Management
 
-Primary replacement files:
+Primary content files:
 
 - `src/config/site.ts`: company name, phone, WhatsApp, email, address, social links
 - `src/config/navigation.ts`: navigation labels and routes
 - `src/data/projects.ts`: project names, locations, approvals, plot sizes, prices, images, SEO text
 - `src/data/amenities.ts`: amenity and investment-benefit content
 - `src/data/locations.ts`: verified distances, landmarks, and statistics
-- `src/data/testimonials.ts`: only replace with verified testimonials before production
+- `src/data/trust.ts`: buyer experience and advisory process notes
 
-Images are currently remote editorial placeholders because no project photos were provided as files. The folder structure under `public/images/` is ready for local production assets.
+Images are currently remote editorial property visuals. The folder structure under `public/images/` is ready for owned production assets.
 
 ## Lead API
 

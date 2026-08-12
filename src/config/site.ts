@@ -7,7 +7,7 @@ export const siteConfig = {
   phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "+91 00000 00000",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "910000000000",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@maghribigroups.com",
-  address: "Office address to be updated, India",
+  address: "India",
   businessHours: "Monday to Saturday, 10:00 AM - 6:30 PM",
   socials: {
     instagram: "https://instagram.com/",

@@ -3,10 +3,9 @@ import Link from "next/link";
 import { ArrowRight, BadgeCheck, Building2, CalendarDays, MapPinned, MessagesSquare } from "lucide-react";
 import { amenities, investmentReasons } from "@/data/amenities";
 import { categories, featuredProject, projects } from "@/data/projects";
-import { locationAdvantages, statistics } from "@/data/locations";
-import { testimonials } from "@/data/testimonials";
+import { brandMarkers, locationAdvantages } from "@/data/locations";
+import { trustNotes } from "@/data/trust";
 import { whatsappHref } from "@/config/site";
-import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Button } from "@/components/ui/Button";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Marquee } from "@/components/ui/Marquee";
@@ -56,7 +55,7 @@ export function HomePage() {
           <SectionHeading
             eyebrow="Featured Projects"
             title="Plots Presented Like Private Collections"
-            text="Each project is structured from centralized data, making details easy to update as approvals, prices and images are finalized."
+            text="A curated view of residential, villa and investment plots shaped around thoughtful planning, clean presentation and guided enquiries."
           />
         </Reveal>
         <Reveal className="project-grid">
@@ -148,15 +147,15 @@ export function HomePage() {
       </section>
 
       <section className="section location-section">
-        <div className="map-placeholder">
+        <div className="location-map">
           <MapPinned size={42} />
-          <span>Google Maps integration placeholder</span>
+          <span>Location map available during consultation</span>
         </div>
         <div>
           <SectionHeading
             eyebrow="Location Advantage"
-            title="Connectivity Details Kept Honest"
-            text="Distances and landmarks are intentionally awaiting verified project data."
+            title="Know the Location Before You Commit"
+            text="Our advisors walk you through access, surroundings, landmarks and growth potential for the project you are considering."
           />
           <ul className="location-list">
             {locationAdvantages.map((item) => (
@@ -167,20 +166,23 @@ export function HomePage() {
       </section>
 
       <section className="stats-band">
-        {statistics.map((stat) => (
-          <AnimatedCounter key={stat.label} {...stat} />
+        {brandMarkers.map((item) => (
+          <div className="stat" key={item.value}>
+            <strong>{item.value}</strong>
+            <span>{item.label}</span>
+          </div>
         ))}
       </section>
 
-      <section className="section testimonials">
-        <SectionHeading eyebrow="From The People" title="Verified Stories Will Live Here" align="center" />
+      <section className="section trust-section">
+        <SectionHeading eyebrow="Buying Experience" title="A Clearer Way to Choose Land" align="center" />
         <div className="testimonial-row">
-          {testimonials.map((item) => (
-            <blockquote key={item.name}>
-              <p>{item.review}</p>
+          {trustNotes.map((item) => (
+            <blockquote key={item.title}>
+              <p>{item.text}</p>
               <footer>
-                <strong>{item.name}</strong>
-                <span>{item.location}</span>
+                <strong>{item.title}</strong>
+                <span>Maghribi advisory process</span>
               </footer>
             </blockquote>
           ))}

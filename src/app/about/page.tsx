@@ -11,8 +11,9 @@ export default function AboutPage() {
     <section className="inner-page section narrow-page">
       <SectionHeading eyebrow="About Us" title="A Premium Land Development Brand" />
       <p>
-        Maghribi Group of Companies is presented here with replacement-ready content. Add the company history,
-        leadership, certifications and verified project details in the central config and data files when available.
+        Maghribi Group of Companies develops a premium plotted living experience built on composed planning,
+        guided customer conversations and a clear path from enquiry to site visit. The brand is shaped for buyers
+        who want land ownership to feel refined, transparent and well supported.
       </p>
     </section>
   );

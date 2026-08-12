@@ -1,14 +1,14 @@
 export const locationAdvantages = [
-  "Highway connectivity details to be updated",
-  "Airport distance to be updated",
-  "City center distance to be updated",
-  "Nearby schools to be updated",
-  "Nearby hospitals to be updated",
-  "Employment hubs to be updated"
+  "Connectivity review during project consultation",
+  "Highway access discussed before site visit",
+  "Airport and city access mapped by project",
+  "Nearby schools and hospitals reviewed by location",
+  "Employment hubs considered during shortlisting",
+  "Neighbourhood growth potential explained by advisor"
 ];
 
-export const statistics = [
-  { value: 0, suffix: "+", label: "Verified statistics pending" },
-  { value: 0, suffix: "+", label: "Project data to be updated" },
-  { value: 0, suffix: "%", label: "Documentation support data pending" }
+export const brandMarkers = [
+  { value: "Site Visits", label: "Scheduled with property advisors" },
+  { value: "Plot Guidance", label: "Shortlisting by need, budget and purpose" },
+  { value: "Clear Papers", label: "Documentation reviewed before purchase" }
 ];

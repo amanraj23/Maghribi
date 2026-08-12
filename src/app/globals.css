@@ -608,7 +608,7 @@ blockquote p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.map-placeholder {
+.location-map {
   min-height: 420px;
   background:
     linear-gradient(135deg, rgba(201, 154, 49, 0.18), rgba(13, 64, 61, 0.22)),
@@ -642,7 +642,8 @@ blockquote p {
 .stat strong {
   display: block;
   font-family: var(--font-heading), serif;
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(2.2rem, 4vw, 4.4rem);
+  line-height: 1;
   color: var(--color-accent);
 }
 

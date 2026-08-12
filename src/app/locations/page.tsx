@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function LocationsPage() {
   return (
     <section className="inner-page section location-section">
-      <div className="map-placeholder">Map integration placeholder</div>
+      <div className="location-map">Location map available during consultation</div>
       <div>
-        <SectionHeading eyebrow="Locations" title="Verified Connectivity, Added Carefully" />
+        <SectionHeading eyebrow="Locations" title="Understand Every Project Surrounding" />
         <ul className="location-list">
           {locationAdvantages.map((item) => (
             <li key={item}>{item}</li>

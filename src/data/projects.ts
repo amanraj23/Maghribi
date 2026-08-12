@@ -1,7 +1,6 @@
 import type { Project } from "@/types/project";
 
-const imageBase =
-  "https://images.unsplash.com/photo";
+const imageBase = "https://images.unsplash.com/photo";
 
 export const projects: Project[] = [
   {
@@ -9,7 +8,7 @@ export const projects: Project[] = [
     slug: "green-hills",
     location: "Gauribidanur",
     category: "Villa Plots",
-    approvalStatus: "Approval details to be updated",
+    approvalStatus: "Documentation available on request",
     plotSizes: ["30 x 40", "30 x 50", "40 x 60"],
     startingPrice: "Price on request",
     description: "A composed villa plot community planned around clean roads, green setbacks and everyday convenience.",
@@ -28,9 +27,9 @@ export const projects: Project[] = [
   {
     name: "Maghribi Emirates County",
     slug: "emirates-county",
-    location: "Location to be updated",
+    location: "Bengaluru growth corridor",
     category: "Investment Plots",
-    approvalStatus: "Approval details to be updated",
+    approvalStatus: "Project papers available on request",
     plotSizes: ["Custom plot sizes"],
     startingPrice: "Price on request",
     description: "Investment-oriented plots with a premium planning language and a clear path to ownership.",
@@ -49,9 +48,9 @@ export const projects: Project[] = [
   {
     name: "Maghribi Palm Estate",
     slug: "palm-estate",
-    location: "Location to be updated",
+    location: "Emerging residential corridor",
     category: "Residential Plots",
-    approvalStatus: "Approval details to be updated",
+    approvalStatus: "Documentation desk available",
     plotSizes: ["30 x 40", "40 x 60"],
     startingPrice: "Price on request",
     description: "Residential plots planned for comfort, natural light, cleaner streetscapes and easy future buildability.",
