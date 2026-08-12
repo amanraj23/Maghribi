@@ -71,7 +71,7 @@ export function LeadForm({ sourcePage = "Website" }: { sourcePage?: string }) {
       <label>
         <span>Interested Project</span>
         <select name="interestedProject" defaultValue="">
-          <option value="">Select project</option>
+          <option value="">Project launch updates</option>
           {projects.map((project) => (
             <option key={project.slug} value={project.name}>
               {project.name}

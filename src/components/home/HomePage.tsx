@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, Building2, CalendarDays, MapPinned, MessagesSquare } from "lucide-react";
 import { amenities, investmentReasons } from "@/data/amenities";
-import { categories, featuredProject, projects } from "@/data/projects";
+import { categories, lifestyleImages, projects } from "@/data/projects";
 import { brandMarkers, locationAdvantages } from "@/data/locations";
 import { trustNotes } from "@/data/trust";
 import { whatsappHref } from "@/config/site";
@@ -54,12 +54,13 @@ export function HomePage() {
         <Reveal>
           <SectionHeading
             eyebrow="Featured Projects"
-            title="Plots Presented Like Private Collections"
-            text="A curated view of residential, villa and investment plots shaped around thoughtful planning, clean presentation and guided enquiries."
+            title="Private Project Releases, Shared With Serious Buyers First"
+            text="Maghribi is preparing its next plotted development releases. Join the enquiry list to receive location, plot-size and site-visit information as soon as inventory opens."
           />
         </Reveal>
-        <Reveal className="project-grid">
-          {projects.map((project) => (
+        {projects.length > 0 ? (
+          <Reveal className="project-grid">
+            {projects.map((project) => (
             <article className="project-card" key={project.slug}>
               <div className="project-image">
                 <Image src={project.image} alt={`${project.name} project view`} fill sizes="(min-width: 900px) 33vw, 100vw" />
@@ -77,9 +78,22 @@ export function HomePage() {
                   Explore Project <ArrowRight size={16} />
                 </Link>
               </div>
-            </article>
-          ))}
-        </Reveal>
+              </article>
+            ))}
+          </Reveal>
+        ) : (
+          <Reveal className="release-panel">
+            <div>
+              <p className="eyebrow">Upcoming Inventory</p>
+              <h3>Project details will be announced after final release readiness.</h3>
+              <span>
+                Register your interest and the advisory team will share only verified project information, including location,
+                plot sizes, documentation status and site visit slots.
+              </span>
+            </div>
+            <Button href="#contact">Join Priority List</Button>
+          </Reveal>
+        )}
       </section>
 
       <section className="section split-section" id="why-invest">
@@ -119,17 +133,25 @@ export function HomePage() {
 
       <section className="section editorial">
         <Reveal className="editorial-image">
-          <Image src={featuredProject.image} alt={`${featuredProject.name} featured project`} fill sizes="(min-width: 900px) 50vw, 100vw" />
+          <Image
+            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=85"
+            alt="Elegant plotted residential community planning"
+            fill
+            sizes="(min-width: 900px) 50vw, 100vw"
+          />
         </Reveal>
         <Reveal className="editorial-copy">
-          <SectionHeading eyebrow="Featured Project" title={featuredProject.name} />
-          <p>{featuredProject.story}</p>
+          <SectionHeading eyebrow="The Maghribi Standard" title="Land Buying With More Poise and Less Noise" />
+          <p>
+            The website is now shaped around the way Maghribi can actually work before project launches: receive enquiries,
+            understand buyer intent, shortlist the right opportunity and share confirmed details with care.
+          </p>
           <ul>
-            {featuredProject.highlights.map((item) => (
+            {["Priority enquiry list", "Advisor-guided project matching", "Documentation shared before commitment", "Site visits when inventory opens"].map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <Button href={`/projects/${featuredProject.slug}`}>Get Project Details</Button>
+          <Button href="#contact">Request a Call Back</Button>
         </Reveal>
       </section>
 
@@ -192,7 +214,7 @@ export function HomePage() {
       <section className="section gallery-preview">
         <SectionHeading eyebrow="Gallery" title="A Visual Sense of Place" />
         <div className="masonry">
-          {projects.flatMap((project) => project.gallery).slice(0, 6).map((image, index) => (
+          {lifestyleImages.map((image, index) => (
             <Link className="gallery-tile" href="/gallery" key={image}>
               <Image src={image} alt={`Maghribi gallery image ${index + 1}`} fill sizes="(min-width: 900px) 33vw, 100vw" />
             </Link>
@@ -206,10 +228,10 @@ export function HomePage() {
           <h2>Site visits, plotted stories and project updates.</h2>
         </div>
         <div className="social-cards">
-          {projects.map((project) => (
-            <article key={project.slug}>
-              <Image src={project.image} alt={`${project.name} social preview`} fill sizes="280px" />
-              <span>{project.name}</span>
+          {categories.map((category) => (
+            <article key={category.title}>
+              <Image src={category.image} alt={`${category.title} social preview`} fill sizes="280px" />
+              <span>{category.title}</span>
             </article>
           ))}
         </div>

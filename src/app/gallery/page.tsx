@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { projects } from "@/data/projects";
+import { lifestyleImages } from "@/data/projects";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
@@ -9,14 +9,17 @@ export const metadata: Metadata = {
 };
 
 export default function GalleryPage() {
-  const images = projects.flatMap((project) => project.gallery.map((image) => ({ image, project: project.name })));
   return (
     <section className="inner-page section gallery-preview">
-      <SectionHeading eyebrow="Gallery" title="Project Images" />
+      <SectionHeading
+        eyebrow="Gallery"
+        title="A Premium Sense of Place"
+        text="A visual direction for Maghribi's plotted communities, to be replaced with owned project photography as developments are released."
+      />
       <div className="masonry">
-        {images.map((item, index) => (
-          <div className="gallery-tile" key={item.image}>
-            <Image src={item.image} alt={`${item.project} gallery ${index + 1}`} fill sizes="(min-width: 900px) 33vw, 100vw" />
+        {lifestyleImages.map((image, index) => (
+          <div className="gallery-tile" key={image}>
+            <Image src={image} alt={`Maghribi lifestyle gallery ${index + 1}`} fill sizes="(min-width: 900px) 33vw, 100vw" />
           </div>
         ))}
       </div>

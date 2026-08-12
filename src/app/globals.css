@@ -496,6 +496,41 @@ blockquote {
   font-weight: 800;
 }
 
+.release-panel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: clamp(22px, 4vw, 48px);
+  padding: clamp(28px, 5vw, 58px);
+  background:
+    linear-gradient(135deg, rgba(13, 64, 61, 0.94), rgba(8, 18, 13, 0.96)),
+    linear-gradient(90deg, rgba(201, 154, 49, 0.16), transparent);
+  border: 1px solid rgba(201, 154, 49, 0.32);
+  color: var(--color-on-dark);
+  box-shadow: var(--shadow-soft);
+}
+
+.release-panel > svg {
+  color: var(--color-accent);
+}
+
+.release-panel h3 {
+  max-width: 760px;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+}
+
+.release-panel span {
+  display: block;
+  max-width: 760px;
+  margin-top: 16px;
+  color: var(--color-muted-on-dark);
+  line-height: 1.7;
+}
+
+.project-category-space {
+  margin-top: 32px;
+}
+
 .split-section,
 .editorial,
 .location-section,
@@ -1020,6 +1055,7 @@ blockquote span {
   .lead-form,
   .project-grid,
   .category-grid,
+  .release-panel,
   .reason-grid,
   .amenity-grid,
   .testimonial-row,
