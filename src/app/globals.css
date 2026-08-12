@@ -76,15 +76,21 @@ img {
   align-items: center;
   gap: 28px;
   padding: 18px clamp(18px, 5vw, 70px);
-  color: #fff;
+  color: var(--color-on-dark);
   transition: background 280ms ease, box-shadow 280ms ease, padding 280ms ease;
 }
 
 .site-header.is-scrolled {
-  background: rgba(13, 64, 61, 0.94);
+  background: rgba(13, 64, 61, 0.98);
   box-shadow: 0 16px 44px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(18px);
   padding-block: 12px;
+}
+
+.site-header.is-scrolled .brand-copy strong,
+.site-header.is-scrolled .brand-copy small,
+.site-header.is-scrolled .desktop-nav a {
+  color: var(--color-on-dark);
 }
 
 .brand {
@@ -173,7 +179,7 @@ img {
 }
 
 .desktop-nav a {
-  opacity: 0.82;
+  opacity: 0.92;
   transition: opacity 180ms ease, color 180ms ease;
 }
 
@@ -193,9 +199,9 @@ img {
 .icon-btn {
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.26);
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  border: 1px solid rgba(255, 250, 240, 0.38);
+  background: rgba(255, 250, 240, 0.1);
+  color: var(--color-on-dark);
   display: grid;
   place-items: center;
 }
