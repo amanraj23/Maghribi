@@ -5,6 +5,8 @@
   --color-surface: #ffffff;
   --color-text: #171712;
   --color-muted: #746f63;
+  --color-on-dark: #fffaf0;
+  --color-muted-on-dark: rgba(255, 250, 240, 0.82);
   --color-accent: #c99a31;
   --color-accent-soft: #f1dfb4;
   --color-border: rgba(23, 23, 18, 0.14);
@@ -26,6 +28,8 @@ body {
   background: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-body), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -281,6 +285,7 @@ img {
 .hero-content {
   max-width: 760px;
   animation: rise 900ms ease both;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.38);
 }
 
 .eyebrow,
@@ -312,7 +317,7 @@ h3 {
   display: block;
   max-width: 590px;
   margin: 24px 0 34px;
-  color: rgba(255, 255, 255, 0.84);
+  color: var(--color-muted-on-dark);
   font-size: clamp(1rem, 1.4vw, 1.25rem);
   line-height: 1.7;
 }
@@ -529,7 +534,24 @@ blockquote p {
 .dark-band,
 .social-section {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-dark);
+}
+
+.dark-band .section-heading h2,
+.dark-band .section-heading span,
+.social-section h2,
+.lead-cta h2,
+.lead-cta p,
+.project-hero h1,
+.project-hero span,
+.site-footer h3 {
+  color: inherit;
+}
+
+.dark-band .section-heading span,
+.social-section p,
+.lead-cta p {
+  color: var(--color-muted-on-dark);
 }
 
 .category-card {
@@ -564,7 +586,7 @@ blockquote p {
 .category-card p {
   max-width: 320px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--color-muted-on-dark);
 }
 
 .category-card a {
@@ -619,7 +641,7 @@ blockquote p {
 }
 
 .stat span {
-  color: rgba(255, 255, 255, 0.76);
+  color: var(--color-muted-on-dark);
 }
 
 .testimonial-row {
@@ -699,7 +721,7 @@ blockquote span {
 }
 
 .lead-cta p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-muted-on-dark);
 }
 
 .lead-form {
@@ -711,15 +733,22 @@ blockquote span {
 .lead-form label {
   display: grid;
   gap: 7px;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--color-muted-on-dark);
   font-size: 0.72rem;
+  font-weight: 800;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
-.inner-page .lead-form label,
-.contact-grid .lead-form label {
+.inner-page .lead-form label {
   color: var(--color-muted);
+}
+
+.contact-grid > .lead-form label,
+.project-detail-grid aside .lead-form label,
+.lead-cta .lead-form label,
+.hero-panel .lead-form label {
+  color: var(--color-muted-on-dark);
 }
 
 .lead-form input,
@@ -734,6 +763,16 @@ blockquote span {
   border-radius: 0;
 }
 
+.lead-form input::placeholder,
+.lead-form textarea::placeholder {
+  color: rgba(255, 250, 240, 0.62);
+}
+
+.lead-form select option {
+  background: #fff;
+  color: var(--color-text);
+}
+
 .inner-page .lead-form input,
 .inner-page .lead-form select,
 .inner-page .lead-form textarea,
@@ -743,6 +782,13 @@ blockquote span {
   color: var(--color-text);
   background: #fff;
   border-color: var(--color-border);
+}
+
+.inner-page .lead-form input::placeholder,
+.inner-page .lead-form textarea::placeholder,
+.contact-grid .lead-form input::placeholder,
+.contact-grid .lead-form textarea::placeholder {
+  color: #7b756a;
 }
 
 .lead-form textarea {
@@ -797,7 +843,11 @@ blockquote span {
   display: flex;
   align-items: flex-end;
   padding: 160px clamp(18px, 6vw, 90px) 70px;
-  color: #fff;
+  color: var(--color-on-dark);
+}
+
+.project-hero > div {
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.42);
 }
 
 .project-hero h1 {
@@ -813,7 +863,7 @@ blockquote span {
 .project-detail-grid aside,
 .contact-grid > .lead-form {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-dark);
   padding: 24px;
 }
 
@@ -832,7 +882,7 @@ blockquote span {
 
 .site-footer {
   background: #08120d;
-  color: #fff;
+  color: var(--color-on-dark);
   padding: 64px clamp(18px, 6vw, 90px) 26px;
 }
 
@@ -848,7 +898,7 @@ blockquote span {
 
 .site-footer p,
 .site-footer a {
-  color: rgba(255, 255, 255, 0.68);
+  color: var(--color-muted-on-dark);
   line-height: 1.7;
   margin: 0 0 10px;
 }
@@ -869,7 +919,7 @@ blockquote span {
   margin-top: 42px;
   padding-top: 22px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 250, 240, 0.68);
   font-size: 0.85rem;
 }
 
