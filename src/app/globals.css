@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #01351f;
+  --color-primary: #0d403d;
   --color-secondary: #0c1410;
   --color-background: #fbf8f0;
   --color-surface: #ffffff;
@@ -81,7 +81,7 @@ img {
 }
 
 .site-header.is-scrolled {
-  background: rgba(5, 24, 16, 0.94);
+  background: rgba(13, 64, 61, 0.94);
   box-shadow: 0 16px 44px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(18px);
   padding-block: 12px;
@@ -210,7 +210,7 @@ img {
   inset: 92px 14px auto;
   display: none;
   padding: 22px;
-  background: rgba(4, 28, 17, 0.98);
+  background: rgba(10, 52, 50, 0.98);
   color: #fff;
   box-shadow: var(--shadow-soft);
 }
@@ -270,7 +270,7 @@ img {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(1, 17, 10, 0.83), rgba(1, 25, 15, 0.4), rgba(1, 16, 9, 0.26)),
+    linear-gradient(90deg, rgba(7, 36, 34, 0.84), rgba(13, 64, 61, 0.42), rgba(8, 38, 36, 0.28)),
     linear-gradient(0deg, rgba(0, 0, 0, 0.4), transparent 58%);
   z-index: 1;
 }
@@ -323,7 +323,7 @@ h3 {
 }
 
 .hero-panel {
-  background: rgba(7, 22, 15, 0.76);
+  background: rgba(10, 52, 50, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 18px;
   backdrop-filter: blur(18px);
@@ -605,8 +605,8 @@ blockquote p {
 .map-placeholder {
   min-height: 420px;
   background:
-    linear-gradient(135deg, rgba(201, 154, 49, 0.18), rgba(1, 53, 31, 0.2)),
-    repeating-linear-gradient(45deg, rgba(1, 53, 31, 0.16), rgba(1, 53, 31, 0.16) 1px, transparent 1px, transparent 18px);
+    linear-gradient(135deg, rgba(201, 154, 49, 0.18), rgba(13, 64, 61, 0.22)),
+    repeating-linear-gradient(45deg, rgba(13, 64, 61, 0.16), rgba(13, 64, 61, 0.16) 1px, transparent 1px, transparent 18px);
   border: 1px solid var(--color-border);
   display: grid;
   place-items: center;
